@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LrcModel.h"
 @interface LrcView : UIScrollView
-
+@property (nonatomic,strong) UITableView *lrcsList;
+@property (nonatomic,strong) NSArray <LrcModel *> *LrcArray;
+@property (nonatomic,assign) NSInteger row;
 @end

@@ -55,7 +55,7 @@
 //导航栏分割线
 @property (nonatomic,weak) UIView *bottomLine;
 //导航栏标题
-@property (nonatomic,weak) NSMutableAttributedString *title;
+@property (nonatomic,copy) NSMutableAttributedString *title;
 //导航栏代理
 @property (nonatomic,weak) id<sorinNavigationbarDelegate> barDelegate;
 //导航栏数据代理

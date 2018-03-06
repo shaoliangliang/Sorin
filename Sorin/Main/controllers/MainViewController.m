@@ -19,8 +19,6 @@
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     self.navigationItem.hidesBackButton = YES;
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    
 }
 - (NSMutableAttributedString *)sorinNavigationbarTitle:(SorinNavgationbar *)navigationBar{
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"Main"];
