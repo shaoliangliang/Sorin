@@ -22,6 +22,7 @@
 		A65855C42046C1E8004C82B8 /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A65855C32046C1E8004C82B8 /* MusicModel.m */; };
 		A65855C72046F039004C82B8 /* MusicPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65855C62046F039004C82B8 /* MusicPlayViewController.m */; };
 		A65855CA204A7C13004C82B8 /* LrcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A65855C9204A7C13004C82B8 /* LrcModel.m */; };
+		A65855CE205000BD004C82B8 /* MotionManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65855CD205000BD004C82B8 /* MotionManagerViewController.m */; };
 		A6D3A9D7204151000078A216 /* bb@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6D3A9AC204151000078A216 /* bb@2x.jpg */; };
 		A6D3A9D8204151000078A216 /* bb_icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6D3A9AD204151000078A216 /* bb_icon@2x.jpg */; };
 		A6D3A9D9204151000078A216 /* dzq@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6D3A9AE204151000078A216 /* dzq@2x.jpg */; };
@@ -125,6 +126,8 @@
 		A65855C62046F039004C82B8 /* MusicPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicPlayViewController.m; sourceTree = "<group>"; };
 		A65855C8204A7C13004C82B8 /* LrcModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LrcModel.h; sourceTree = "<group>"; };
 		A65855C9204A7C13004C82B8 /* LrcModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LrcModel.m; sourceTree = "<group>"; };
+		A65855CC205000BD004C82B8 /* MotionManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotionManagerViewController.h; sourceTree = "<group>"; };
+		A65855CD205000BD004C82B8 /* MotionManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionManagerViewController.m; sourceTree = "<group>"; };
 		A6D3A9AC204151000078A216 /* bb@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bb@2x.jpg"; sourceTree = "<group>"; };
 		A6D3A9AD204151000078A216 /* bb_icon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bb_icon@2x.jpg"; sourceTree = "<group>"; };
 		A6D3A9AE204151000078A216 /* dzq@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dzq@2x.jpg"; sourceTree = "<group>"; };
@@ -268,13 +271,13 @@
 		A63A2BE2203EA72D007FACCF /* Sorin */ = {
 			isa = PBXGroup;
 			children = (
+				A65855CB2050008A004C82B8 /* other */,
 				A65855BE20464BC7004C82B8 /* Category */,
 				A602419220453C4100A8846D /* SorinTool */,
 				A6D3AA002042CC010078A216 /* Base */,
 				A6D3AA282043EF150078A216 /* Main */,
 				A6D3AA012042CC010078A216 /* Music */,
 				A6D3AA052042CC010078A216 /* News */,
-				A6D3A9AA204151000078A216 /* QQResources */,
 				A63A2BE6203EA72D007FACCF /* ViewController.h */,
 				A63A2BE7203EA72D007FACCF /* ViewController.m */,
 				A63A2C15203EA743007FACCF /* Sorin.pch */,
@@ -315,6 +318,16 @@
 			);
 			path = Category;
 			sourceTree = "<group>";
+		};
+		A65855CB2050008A004C82B8 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				A65855CC205000BD004C82B8 /* MotionManagerViewController.h */,
+				A65855CD205000BD004C82B8 /* MotionManagerViewController.m */,
+			);
+			name = other;
+			path = Sorin/other;
+			sourceTree = SOURCE_ROOT;
 		};
 		A6D3A9AA204151000078A216 /* QQResources */ = {
 			isa = PBXGroup;
@@ -408,6 +421,7 @@
 		A6D3AA012042CC010078A216 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				A6D3A9AA204151000078A216 /* QQResources */,
 				A6D3AA212042E4400078A216 /* MusicTool */,
 				A6D3AA022042CC010078A216 /* controllers */,
 				A6D3AA032042CC010078A216 /* models */,
@@ -767,6 +781,7 @@
 				A6D3AA0B2042CE970078A216 /* SorinBaseViewController.m in Sources */,
 				A6D3AA112042CFCA0078A216 /* MusicViewController.m in Sources */,
 				A65855C120464CF7004C82B8 /* UIView+sorinFrame.m in Sources */,
+				A65855CE205000BD004C82B8 /* MotionManagerViewController.m in Sources */,
 				A63A2BF3203EA72D007FACCF /* main.m in Sources */,
 				A63A2C1B203ED9EF007FACCF /* MainViewController.m in Sources */,
 				A6D3AA1D2042D3160078A216 /* LrcView.m in Sources */,
@@ -938,7 +953,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NNXX73THY;
-				GCC_PREFIX_HEADER = /Users/shaoliangliang/Desktop/Sorin/Sorin/Sorin.pch;
+				GCC_PREFIX_HEADER = $SRCROOT/Sorin/Sorin.pch;
 				INFOPLIST_FILE = Sorin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -956,7 +971,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NNXX73THY;
-				GCC_PREFIX_HEADER = /Users/shaoliangliang/Desktop/Sorin/Sorin/Sorin.pch;
+				GCC_PREFIX_HEADER = $SRCROOT/Sorin/Sorin.pch;
 				INFOPLIST_FILE = Sorin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -7,18 +7,52 @@
 //
 
 #import "MainViewController.h"
-@interface MainViewController ()
+static NSString *const cellID = @"cell";
+@interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic,strong) UITableView *ListTableView;
+@property (nonatomic,strong) NSMutableArray *dataSource;
 
 @end
 
 @implementation MainViewController
-
+- (UITableView *)ListTableView{
+    if (!_ListTableView) {
+        _ListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.sorinNavigationbar.sorin_height, self.view.sorin_width, self.view.sorin_height - 44) style:UITableViewStylePlain];
+        _ListTableView.delegate = self;
+        _ListTableView.dataSource = self;
+        [_ListTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+        IOS_11_ADJUST(_ListTableView);
+    }
+    return _ListTableView;
+}
+- (NSMutableArray *)dataSource{
+    if (!_dataSource) {
+        _dataSource = [NSMutableArray array];
+    }
+    return _dataSource;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataSource.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (!cell) {
+        cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    }
+    cell.textLabel.text = NSStringFromClass([self.dataSource[indexPath.row] class]);
+    return cell;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     //当自定义返回按钮后 右划返回上一层的代理方法
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     self.navigationItem.hidesBackButton = YES;
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.dataSource addObject:[MotionManagerViewController new]];
+    [self.view addSubview:self.ListTableView];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.navigationController pushViewController:self.dataSource[indexPath.row] animated:YES];
 }
 - (NSMutableAttributedString *)sorinNavigationbarTitle:(SorinNavgationbar *)navigationBar{
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"Main"];
