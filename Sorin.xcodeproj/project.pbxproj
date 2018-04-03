@@ -24,6 +24,7 @@
 		A65855CA204A7C13004C82B8 /* LrcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A65855C9204A7C13004C82B8 /* LrcModel.m */; };
 		A65855CE205000BD004C82B8 /* MotionManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65855CD205000BD004C82B8 /* MotionManagerViewController.m */; };
 		A65855D1205F5DF8004C82B8 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65855D0205F5DF8004C82B8 /* GCDViewController.m */; };
+		A65855D420732DFA004C82B8 /* FacebookPOPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65855D320732DFA004C82B8 /* FacebookPOPViewController.m */; };
 		A6D3A9D7204151000078A216 /* bb@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6D3A9AC204151000078A216 /* bb@2x.jpg */; };
 		A6D3A9D8204151000078A216 /* bb_icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6D3A9AD204151000078A216 /* bb_icon@2x.jpg */; };
 		A6D3A9D9204151000078A216 /* dzq@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6D3A9AE204151000078A216 /* dzq@2x.jpg */; };
@@ -131,6 +132,8 @@
 		A65855CD205000BD004C82B8 /* MotionManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionManagerViewController.m; sourceTree = "<group>"; };
 		A65855CF205F5DF8004C82B8 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		A65855D0205F5DF8004C82B8 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		A65855D220732DFA004C82B8 /* FacebookPOPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacebookPOPViewController.h; sourceTree = "<group>"; };
+		A65855D320732DFA004C82B8 /* FacebookPOPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacebookPOPViewController.m; sourceTree = "<group>"; };
 		A6D3A9AC204151000078A216 /* bb@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bb@2x.jpg"; sourceTree = "<group>"; };
 		A6D3A9AD204151000078A216 /* bb_icon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bb_icon@2x.jpg"; sourceTree = "<group>"; };
 		A6D3A9AE204151000078A216 /* dzq@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dzq@2x.jpg"; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 				A65855CD205000BD004C82B8 /* MotionManagerViewController.m */,
 				A65855CF205F5DF8004C82B8 /* GCDViewController.h */,
 				A65855D0205F5DF8004C82B8 /* GCDViewController.m */,
+				A65855D220732DFA004C82B8 /* FacebookPOPViewController.h */,
+				A65855D320732DFA004C82B8 /* FacebookPOPViewController.m */,
 			);
 			name = other;
 			path = Sorin/other;
@@ -778,6 +783,7 @@
 				A65855C72046F039004C82B8 /* MusicPlayViewController.m in Sources */,
 				A63A2C18203ED261007FACCF /* SorinNavigationViewController.m in Sources */,
 				A6D3AA1A2042D2F90078A216 /* MusicListViewCell.m in Sources */,
+				A65855D420732DFA004C82B8 /* FacebookPOPViewController.m in Sources */,
 				A63A2BE8203EA72D007FACCF /* ViewController.m in Sources */,
 				A65855D1205F5DF8004C82B8 /* GCDViewController.m in Sources */,
 				A65855CA204A7C13004C82B8 /* LrcModel.m in Sources */,

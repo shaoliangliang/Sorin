@@ -48,7 +48,7 @@ static NSString *const cellID = @"cell";
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     self.navigationItem.hidesBackButton = YES;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataSource = [NSMutableArray arrayWithObjects:[MotionManagerViewController new],[GCDViewController new], nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:[MotionManagerViewController new],[GCDViewController new],[FacebookPOPViewController new], nil];
     [self.view addSubview:self.ListTableView];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
