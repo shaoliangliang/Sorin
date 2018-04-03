@@ -20,6 +20,7 @@
 #import "MusicInfoModel.h"
 #import "MusicToolInstance.h"
 #import "MotionManagerViewController.h"
+#import "GCDViewController.h"
 #define IOS_11 @available(iOS 11.0, *)
 #define IOS_11_ADJUST(view) if (IOS_11){view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;}else {self.automaticallyAdjustsScrollViewInsets = NO;}
 
