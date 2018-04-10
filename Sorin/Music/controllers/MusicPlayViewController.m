@@ -161,6 +161,7 @@ enum {
     return btn;
 }
 -(void)leftClickEvent:(UIButton *)eventBtn navigationbar:(SorinNavgationbar *)navigationbar{
+    [_displayLink invalidate];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (NSMutableAttributedString *)sorinNavigationbarTitle:(SorinNavgationbar *)navigationBar{

@@ -18,7 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-//    self.window.rootViewController = [[SorinNavigationViewController alloc] initWithRootViewController:[MainViewController new]];
     self.window.rootViewController = [[MainTabbarController alloc] init];
     [self.window makeKeyWindow];
     return YES;

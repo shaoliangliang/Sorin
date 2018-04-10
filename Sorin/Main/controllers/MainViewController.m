@@ -25,12 +25,7 @@ static NSString *const cellID = @"cell";
     }
     return _ListTableView;
 }
-- (NSMutableArray *)dataSource{
-    if (!_dataSource) {
-        _dataSource = [NSMutableArray array];
-    }
-    return _dataSource;
-}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataSource.count;
 }
@@ -48,11 +43,13 @@ static NSString *const cellID = @"cell";
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     self.navigationItem.hidesBackButton = YES;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataSource = [NSMutableArray arrayWithObjects:[MotionManagerViewController new],[GCDViewController new],[FacebookPOPViewController new], nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:[MotionManagerViewController class],[GCDViewController class],[FacebookPOPViewController class], nil];
     [self.view addSubview:self.ListTableView];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.navigationController pushViewController:self.dataSource[indexPath.row] animated:YES];
+    
+    [self.navigationController pushViewController:[self.dataSource[indexPath.row] new] animated:YES];
+ 
 }
 - (NSMutableAttributedString *)sorinNavigationbarTitle:(SorinNavgationbar *)navigationBar{
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"Main"];

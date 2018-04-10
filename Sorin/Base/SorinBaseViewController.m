@@ -34,7 +34,7 @@
     return _sorinNavigationbar;
 }
 - (void)dealloc{
-    NSLog(@"dealloc");
+    NSLog(@"dealloc %@",self.class);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

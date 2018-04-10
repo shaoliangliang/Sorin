@@ -9,40 +9,40 @@
 #import "FacebookPOPViewController.h"
 #import <POP.h>
 @interface FacebookPOPViewController ()
-@property (nonatomic,strong)UIView *pop_view;
+@property (nonatomic,strong)UIButton *pop_view;
 @end
 
 @implementation FacebookPOPViewController
 - (void)viewWillAppear:(BOOL)animated{
-    self.pop_view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-    self.pop_view.center = CGPointMake(self.view.frame.size.width / 2, 40 + 70);
-    self.pop_view.backgroundColor = [UIColor purpleColor];
-    [self.view addSubview:self.pop_view];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self POPSpring];
-    });
+    
+}
+- (void)pre{
+    [self.navigationController pushViewController:[GCDViewController new] animated:YES];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    
+    self.pop_view = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+    self.pop_view.center = CGPointMake(self.view.frame.size.width / 2, 40 + 70);
+    self.pop_view.backgroundColor = [UIColor purpleColor];
+    [self.pop_view addTarget:self action:@selector(pre) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.pop_view];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self POPSpring];
+    });
     // Do any additional setup after loading the view.
 }
 - (void)leftClickEvent:(UIButton *)eventBtn navigationbar:(SorinNavgationbar *)navigationbar{
     [self.pop_view pop_removeAnimationForKey:@"center"];
-    [self.pop_view removeFromSuperview];
-    [self.sorinNavigationbar removeFromSuperview];
     [self.navigationController popViewControllerAnimated:YES];
+
 }
 - (UIView *)sorinNavagationbarLeftView:(SorinNavgationbar *)navigationBar{
     UIButton *v = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     v.backgroundColor = [UIColor redColor];
     return v;
 }
-- (void)dealloc{
-    NSLog(@"xiaohui");
-}
+
 - (void)POPSpring{
     POPSpringAnimation *POPSpring = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
     POPSpring.springBounciness = 15;

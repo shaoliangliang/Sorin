@@ -24,7 +24,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (void)push{
-    [self.navigationController pushViewController:[MainViewController new] animated:YES];
+    [self.navigationController pushViewController:[FacebookPOPViewController new] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
