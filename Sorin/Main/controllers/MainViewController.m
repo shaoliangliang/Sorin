@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "SDWebimageViewController.h"
+#import "ShareSDKViewController.h"
 static NSString *const cellID = @"cell";
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *ListTableView;
@@ -44,7 +45,7 @@ static NSString *const cellID = @"cell";
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     self.navigationItem.hidesBackButton = YES;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataSource = [NSMutableArray arrayWithObjects:[MotionManagerViewController class],[GCDViewController class],[FacebookPOPViewController class],[SDWebimageViewController class], nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:[MotionManagerViewController class],[GCDViewController class],[FacebookPOPViewController class],[SDWebimageViewController class],[ShareSDKViewController class], nil];
     [self.view addSubview:self.ListTableView];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
