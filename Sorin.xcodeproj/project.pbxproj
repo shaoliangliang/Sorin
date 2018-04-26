@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0782AD8320902A1900CA8F70 /* UIColor+CustomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0782AD8220902A1900CA8F70 /* UIColor+CustomColor.m */; };
 		0782AD852090306100CA8F70 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0782AD842090306100CA8F70 /* MobileCoreServices.framework */; };
+		07FB1FBC20917F780028F725 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB1FBB20917F780028F725 /* RuntimeViewController.m */; };
 		3027E825F26869C9F4B93283 /* libPods-Sorin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52207947D822A22F2FFACFB6 /* libPods-Sorin.a */; };
 		A63A2BE5203EA72D007FACCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A63A2BE4203EA72D007FACCF /* AppDelegate.m */; };
 		A63A2BE8203EA72D007FACCF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A63A2BE7203EA72D007FACCF /* ViewController.m */; };
@@ -132,6 +133,8 @@
 		0782AD8220902A1900CA8F70 /* UIColor+CustomColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColor.m"; sourceTree = "<group>"; };
 		0782AD842090306100CA8F70 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0782AD8620904C8C00CA8F70 /* Sorin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sorin.entitlements; sourceTree = "<group>"; };
+		07FB1FBA20917F780028F725 /* RuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeViewController.h; sourceTree = "<group>"; };
+		07FB1FBB20917F780028F725 /* RuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewController.m; sourceTree = "<group>"; };
 		52207947D822A22F2FFACFB6 /* libPods-Sorin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sorin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A602419320453C7300A8846D /* SorinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SorinTool.h; sourceTree = "<group>"; };
 		A63A2BE0203EA72D007FACCF /* Sorin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sorin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -444,6 +447,8 @@
 				A63AB637207CAD1000CC084E /* SDWebimageViewController.m */,
 				A69A724D2090217F00D06387 /* ShareSDKViewController.h */,
 				A69A724E2090217F00D06387 /* ShareSDKViewController.m */,
+				07FB1FBA20917F780028F725 /* RuntimeViewController.h */,
+				07FB1FBB20917F780028F725 /* RuntimeViewController.m */,
 				A69A724B20901BD300D06387 /* 12422208.png */,
 			);
 			name = other;
@@ -1034,6 +1039,7 @@
 				A6D3AA0B2042CE970078A216 /* SorinBaseViewController.m in Sources */,
 				A6D3AA112042CFCA0078A216 /* MusicViewController.m in Sources */,
 				A65855C120464CF7004C82B8 /* UIView+sorinFrame.m in Sources */,
+				07FB1FBC20917F780028F725 /* RuntimeViewController.m in Sources */,
 				A65855CE205000BD004C82B8 /* MotionManagerViewController.m in Sources */,
 				A63A2BF3203EA72D007FACCF /* main.m in Sources */,
 				A63A2C1B203ED9EF007FACCF /* MainViewController.m in Sources */,
