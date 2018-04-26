@@ -4,7 +4,7 @@
 <dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>mqq</string>
+		<string>sinaweibohd</string>
 		<string>sinaweibosso</string>
 		<string>weibosdk</string>
 		<string>sinaweibo</string>

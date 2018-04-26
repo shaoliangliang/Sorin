@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0782AD8320902A1900CA8F70 /* UIColor+CustomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0782AD8220902A1900CA8F70 /* UIColor+CustomColor.m */; };
+		0782AD852090306100CA8F70 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0782AD842090306100CA8F70 /* MobileCoreServices.framework */; };
 		3027E825F26869C9F4B93283 /* libPods-Sorin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52207947D822A22F2FFACFB6 /* libPods-Sorin.a */; };
 		A63A2BE5203EA72D007FACCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A63A2BE4203EA72D007FACCF /* AppDelegate.m */; };
 		A63A2BE8203EA72D007FACCF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A63A2BE7203EA72D007FACCF /* ViewController.m */; };
@@ -126,6 +128,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0782AD8120902A1900CA8F70 /* UIColor+CustomColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColor.h"; sourceTree = "<group>"; };
+		0782AD8220902A1900CA8F70 /* UIColor+CustomColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColor.m"; sourceTree = "<group>"; };
+		0782AD842090306100CA8F70 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0782AD8620904C8C00CA8F70 /* Sorin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sorin.entitlements; sourceTree = "<group>"; };
 		52207947D822A22F2FFACFB6 /* libPods-Sorin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sorin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A602419320453C7300A8846D /* SorinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SorinTool.h; sourceTree = "<group>"; };
 		A63A2BE0203EA72D007FACCF /* Sorin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sorin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0782AD852090306100CA8F70 /* MobileCoreServices.framework in Frameworks */,
 				A69A723F20883B5700D06387 /* libsqlite3.tbd in Frameworks */,
 				A69A723D20883B4B00D06387 /* ImageIO.framework in Frameworks */,
 				A69A723B20883B3C00D06387 /* JavaScriptCore.framework in Frameworks */,
@@ -315,6 +322,7 @@
 		2655228DECAA2B816149E3B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0782AD842090306100CA8F70 /* MobileCoreServices.framework */,
 				A69A723E20883B5700D06387 /* libsqlite3.tbd */,
 				A69A723C20883B4B00D06387 /* ImageIO.framework */,
 				A69A723A20883B3C00D06387 /* JavaScriptCore.framework */,
@@ -369,6 +377,7 @@
 		A63A2BE2203EA72D007FACCF /* Sorin */ = {
 			isa = PBXGroup;
 			children = (
+				0782AD8620904C8C00CA8F70 /* Sorin.entitlements */,
 				A69A720220883AAC00D06387 /* ShareSDK */,
 				A65855CB2050008A004C82B8 /* other */,
 				A65855BE20464BC7004C82B8 /* Category */,
@@ -416,6 +425,8 @@
 			children = (
 				A65855BF20464CF7004C82B8 /* UIView+sorinFrame.h */,
 				A65855C020464CF7004C82B8 /* UIView+sorinFrame.m */,
+				0782AD8120902A1900CA8F70 /* UIColor+CustomColor.h */,
+				0782AD8220902A1900CA8F70 /* UIColor+CustomColor.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -832,6 +843,11 @@
 					A63A2BDF203EA72D007FACCF = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					A63A2BF7203EA72D007FACCF = {
 						CreatedOnToolsVersion = 9.2;
@@ -980,13 +996,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sorin-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1004,6 +1023,7 @@
 				A6D3AA1A2042D2F90078A216 /* MusicListViewCell.m in Sources */,
 				A65855D420732DFA004C82B8 /* FacebookPOPViewController.m in Sources */,
 				A63A2BE8203EA72D007FACCF /* ViewController.m in Sources */,
+				0782AD8320902A1900CA8F70 /* UIColor+CustomColor.m in Sources */,
 				A69A724F2090217F00D06387 /* ShareSDKViewController.m in Sources */,
 				A65855D1205F5DF8004C82B8 /* GCDViewController.m in Sources */,
 				A65855CA204A7C13004C82B8 /* LrcModel.m in Sources */,

@@ -22,6 +22,10 @@
 #import "MotionManagerViewController.h"
 #import "GCDViewController.h"
 #import "FacebookPOPViewController.h"
+#import <ShareSDKUI/ShareSDK+SSUI.h>
+#import <ShareSDK/ShareSDK.h>
+#import "Masonry.h"
+#import "UIColor+CustomColor.h"
 #define IOS_11 @available(iOS 11.0, *)
 #define IOS_11_ADJUST(view) if (IOS_11){view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;}else {self.automaticallyAdjustsScrollViewInsets = NO;}
 
